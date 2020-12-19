@@ -9,7 +9,7 @@ const addSubmission = async (req, res) => {
 
 const updateSubmission = async (req, res) => {
 
-    const resInfo = await submissionService.updateSubmission(req.params.id, req.body.updateData);
+    const resInfo = await submissionService.updateSubmission(req.params.id, req.body);
     return res.status(resInfo.status).json(resInfo);
 }
 

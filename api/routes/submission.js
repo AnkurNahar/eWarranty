@@ -9,7 +9,7 @@ const submissionRoutes = (app) => {
 
     router.post('/add-submission', sanitizeForm, validateSubmission, submissionControllers.addSubmission);
 
-    router.patch('/update-submission:id', submissionControllers.updateSubmission);
+    router.patch('/update-submission/:id', submissionControllers.updateSubmission);
 
     router.get('/submission-list', submissionControllers.getSubmissions);
 

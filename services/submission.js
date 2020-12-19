@@ -15,6 +15,8 @@ const submissionService = {
 
       updateSubmission: async function (id, updateData) {
         try {
+            console.log(updateData);
+            console.log(id);
             await Submission.query().patch(updateData).where({id});
             return { status: 200, message: "Successful!" };
         } catch (err) {

@@ -23,6 +23,8 @@ const submissionSchema = joi.object({
         .error(() => "Invalid Email!"),
     phone: joi.string().regex(/^(?:\+88|01)?(?:\d{11}|\d{13})$/).required()
         .error(() => "Invalid Phone Number!"),
+    productName: joi.string().min(2).required()
+        .error(() => "Invalid Product Name!"),
     startDate: joi.date().required()
         .error(() => "Invalid Start Date!"),
     warrantyPeriod: joi.number().required()
